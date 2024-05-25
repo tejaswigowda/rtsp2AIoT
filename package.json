@@ -1,0 +1,11 @@
+{
+  "name": "aspen",
+  "version": "1.0.0",
+  "description": "Turn any rtsp stream into a websocket/webrtc stream. Run ML loads anywhere on the internet. Works on Raspberry Pi, Mac OS, Windows, Linux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
