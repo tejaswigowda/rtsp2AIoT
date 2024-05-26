@@ -55,21 +55,30 @@ We discuss a simple example of a web socket server that can aggregate multiple s
 
 
 
-# Use cases
+# Advantages
+
+## Low power consumption on the edge
+
+The platform is designed to be highly efficient, with support for running on low-power hardware. This allows the platform to be deployed on edge devices, such as microcontrollers or single-board computers, without requiring additional hardware or resources. The platform is designed to be lightweight, with minimal resource requirements, allowing it to run on a wide range of hardware platforms. This makes the platform ideal for use cases where power consumption is a concern, such as battery-powered devices or devices with limited power sources.
+
+## Real-time video ML inference
+
+The platform is designed to support real-time video ML inference, allowing users to perform ML inference on video streams in real-time. This allows users to detect objects, recognize faces, or perform other ML tasks on live video streams. The platform is designed to be highly scalable, with support for multiple cameras and multiple ML models running in parallel. This allows users to process multiple video streams simultaneously, with each stream running its own ML model. The platform is designed to be highly efficient, with support for running ML models on the edge or in the cloud. This allows users to choose the best deployment option for their specific use case, based on factors such as latency, cost, or resource availability.
+
+## Modular and flexible
+
+The platform is designed to be modular and flexible, allowing users to easily add new ML models, data sources, and data sinks. This allows users to customize the platform to meet their specific needs, without requiring extensive development or integration work. The platform is built using open-source standards and technologies, allowing for easy integration with third-party services and tools. The platform is designed to be open-source, with support for community contributions and third-party integrations. This allows users to extend the platform with new features, such as new ML models, data sources, or data sinks. The platform is designed to be future-proof, with support for new ML models, data sources, and data sinks. This allows users to keep the platform up-to-date with the latest technologies and trends, without requiring extensive development or integration work.
+
+## Scalable and reliable
+
+The platform is designed to be highly scalable, with support for running on a single server or a cluster of servers. This allows users to scale the platform to meet their specific needs, based on factors such as the number of cameras, the number of video streams, or the complexity of the ML models. The platform is designed to be reliable, with support for automatic backups and disaster recovery. This allows users to ensure that their data is safe and secure, even in the event of hardware failure or data loss. The platform is designed to be performant, with support for real-time video ML inference. This allows users to process video streams in real-time, without requiring extensive buffering or latency. The platform is designed to be cost-effective, with support for running on low-cost hardware or cloud servers. This allows users to deploy the platform on a wide range of hardware platforms, without requiring extensive resources or investment.
+
 
 
 
 
 # Future work
 
-In its current version, the package `fellingdater` is tailored to the
-general workflow for analyzing tree-ring datasets from wooden cultural
-heritage objects and constructions, made of European oak (*Quercus*
-sp.). The sapwood data included in the current version reflect this
-focus on oak. However, all functions can also work with a custom sapwood
-dataset provided as a `data.frame`. As such, sapwood data from other
-regions and wood species can also be explored, modeled and used to
-determine felling dates.
 
 # Acknowledgements
 

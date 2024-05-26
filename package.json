@@ -6,6 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Tejaswi Gowda",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejaswigowda/rtsp2AIoT.git"
+  },
+  "keywords": [
+    "rtsp",
+    "websocket",
+    "network",
+    "ml"
+  ],
+  "bugs": {
+    "url": "https://github.com/tejaswigowda/rtsp2AIoT/issues"
+  },
+  "homepage": "https://github.com/tejaswigowda/rtsp2AIoT#readme",
+  "devDependencies": {
+    "node-rtsp-stream": "^0.0.9",
+    "ws": "^8.17.0"
+  }
 }
