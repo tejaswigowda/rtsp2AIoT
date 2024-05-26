@@ -1,5 +1,5 @@
 if (process.argv.length < 5) {
-    console.log("Usage: node app.js <rtsp-stream-url> <broadcast IP> <broadcast Port> <internalPort>(optional; default=9999) <fps>(optional/ default = 30) <size>(optional;delatult=1920x1080)");
+    console.log("Usage: node rtsp2WebSocket.js <rtsp-stream-url> <broadcast IP> <broadcast Port> <internalPort>(optional; default=9999) <fps>(optional/ default = 30) <size>(optional;delatult=1920x1080)");
     process.exit();
 }
 
