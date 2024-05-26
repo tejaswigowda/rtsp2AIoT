@@ -15,5 +15,7 @@ npm install
 ## Usage
 
 ```bash
-node rtsp2WebSocket.js <rtsp-stream-url> <broadcast IP> <broadcast Port> <internalPort>(optional; default=9999) <fps>(optional/ default = 30) <size>(optional;delatult=1920x1080)")
+node rtsp2WebSocket.js <rtsp-stream-url> <broadcast IP> <broadcast Port> \
+    <internalPort>(optional; default=9999) <fps>(optional/ default = 30) \
+    <size>(optional;default=1920x1080)")
 ```
