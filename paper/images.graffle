@@ -7,6 +7,30 @@
 		<string>com.omnigroup.OmniGraffle6</string>
 		<string>169.23.0.276662</string>
 	</array>
+	<key>ColorProfiles</key>
+	<array>
+		<dict>
+			<key>data</key>
+			<data>
+			AAACGGFwcGwEAAAAbW50clJHQiBYWVogB+YAAQABAAAAAAAAYWNz
+			cEFQUEwAAAAAQVBQTAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA
+			0y1hcHBs7P2jjjiFR8NttL1PetoYLwAAAAAAAAAAAAAAAAAAAAAA
+			AAAAAAAAAAAAAAAAAAAKZGVzYwAAAPwAAAAwY3BydAAAASwAAABQ
+			d3RwdAAAAXwAAAAUclhZWgAAAZAAAAAUZ1hZWgAAAaQAAAAUYlhZ
+			WgAAAbgAAAAUclRSQwAAAcwAAAAgY2hhZAAAAewAAAAsYlRSQwAA
+			AcwAAAAgZ1RSQwAAAcwAAAAgbWx1YwAAAAAAAAABAAAADGVuVVMA
+			AAAUAAAAHABEAGkAcwBwAGwAYQB5ACAAUAAzbWx1YwAAAAAAAAAB
+			AAAADGVuVVMAAAA0AAAAHABDAG8AcAB5AHIAaQBnAGgAdAAgAEEA
+			cABwAGwAZQAgAEkAbgBjAC4ALAAgADIAMAAyADJYWVogAAAAAAAA
+			9tUAAQAAAADTLFhZWiAAAAAAAACD3wAAPb////+7WFlaIAAAAAAA
+			AEq/AACxNwAACrlYWVogAAAAAAAAKDgAABELAADIuXBhcmEAAAAA
+			AAMAAAACZmYAAPKnAAANWQAAE9AAAApbc2YzMgAAAAAAAQxCAAAF
+			3v//8yYAAAeTAAD9kP//+6L///2jAAAD3AAAwG4=
+			</data>
+			<key>space</key>
+			<string>a029ace0e28329ba730b274120e58a1de42147da</string>
+		</dict>
+	</array>
 	<key>CreationDate</key>
 	<string>2024-05-26 00:42:09 +0000</string>
 	<key>Creator</key>
@@ -28,7 +52,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2024-05-26 00:51:13 +0000</string>
+	<string>2024-05-26 01:32:28 +0000</string>
 	<key>Modifier</key>
 	<string>Tejaswi Gowda</string>
 	<key>NotesVisible</key>
@@ -1081,19 +1105,21 @@
 					<dict>
 						<key>shadow</key>
 						<dict>
-							<key>Draws</key>
-							<string>NO</string>
+							<key>Beneath</key>
+							<string>YES</string>
 						</dict>
 						<key>stroke</key>
 						<dict>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<real>0.403922</real>
+								<real>0.10286101901039689</real>
 								<key>g</key>
-								<real>0.0</real>
+								<real>0.84280001119972225</real>
 								<key>r</key>
-								<real>0.19215699999999999</real>
+								<real>0.84727169689119175</real>
+								<key>space</key>
+								<string>a029ace0e28329ba730b274120e58a1de42147da</string>
 							</dict>
 							<key>HeadArrow</key>
 							<string>FilledArrow</string>
@@ -1975,6 +2001,11 @@
 						<dict>
 							<key>Draws</key>
 							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>6</real>
 						</dict>
 					</dict>
 				</dict>
