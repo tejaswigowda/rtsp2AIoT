@@ -28,9 +28,9 @@ var lastSend = 0;
 // camera websocket
 wss1.on('connection', function connection(ws) {
   ws.on('message', function incoming(message) {
-    gMessage = message;
-    lastMessage++;
-    //console.log(gMessage);
+    //gMessage = message;
+    //lastMessage++;
+    //console.log(message);
     wss2.clients.forEach(function each(client) {
       if (client.readyState === WebSocket.OPEN) {
         client.send(message);
