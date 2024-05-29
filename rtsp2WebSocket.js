@@ -26,7 +26,7 @@ var stream = new stream({
 
 
 var WebSocket = require('ws');
-var wsMaster = new WebSocket('ws://localhost:9999');
+var wsMaster = new WebSocket('ws://localhost:' + internalPort);
 wsMaster.on('open', function open() {
     console.log('connected');
 });
@@ -64,7 +64,19 @@ connectws();
 function write(data) {
     // send binary data
     if (ws.readyState == 1){// && numberofclients > 0) {
-        console.log("sending data");
+       // console.log("sending data");
         ws.send(data);
     }
 }
+
+// close stream on exit
+
+process.on('exit', function() {
+    console.log('exit');
+    stream.stop();
+});
+
+process.on('SIGINT', function() {
+    console.log('SIGINT');
+    process.exit();
+});

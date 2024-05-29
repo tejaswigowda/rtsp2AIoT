@@ -15,6 +15,7 @@
 
 
 </body>
+<script src="jsmpeg.min.js"></script>
 
 <script>
 	var portStr = ":" + location.port;
@@ -25,17 +26,14 @@
 	}
 	var st = protocolStr + '://' + location.hostname + portStr + "/jpgstream_client";
 	
-	var ws = new WebSocket(st);
-	var canvas = document.getElementById('canvas');
-	var ctx = canvas.getContext('2d');
-	var img = new Image();
-	img.onload = function() {
-		ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-	};
-	ws.onmessage = function(event) {
-		img.src = event.data;
-	};
-	
+	var player = new JSMpeg.Player(st, {
+		canvas: document.getElementById('canvas'),
+		autoplay: true,
+		audio: false,
+		loop: true
+	});
+
+
 
 	setInterval("location.reload()", 1000 * 60);
 
