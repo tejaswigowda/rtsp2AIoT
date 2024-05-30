@@ -25,6 +25,7 @@ var stream = new stream({
 })
 
 
+
 var WebSocket = require('ws');
 var wsMaster = new WebSocket('ws://localhost:' + internalPort);
 wsMaster.on('open', function open() {
@@ -80,3 +81,16 @@ process.on('SIGINT', function() {
     console.log('SIGINT');
     process.exit();
 });
+
+
+
+// check if stream is still running
+
+setInterval(function() {
+    if(stream.inputStreamStarted){
+        //console.log("stream is running");
+    } else {
+        console.log("stream is not running");
+        process.exit();
+    }
+}, 1000*5);
