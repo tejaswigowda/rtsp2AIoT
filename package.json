@@ -23,7 +23,10 @@
   },
   "homepage": "https://github.com/tejaswigowda/rtsp2AIoT#readme",
   "devDependencies": {
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
     "node-rtsp-stream": "^0.0.9",
+    "url": "^0.11.3",
     "ws": "^8.17.0"
   }
 }
