@@ -27,16 +27,21 @@ var stream = new stream({
 
 
 var WebSocket = require('ws');
-var wsMaster = new WebSocket('ws://localhost:' + internalPort);
-wsMaster.on('open', function open() {
+var wsMain = new WebSocket('ws://localhost:' + internalPort);
+wsMain.on('open', function open() {
     console.log('connected');
 });
-wsMaster.on('close', function close() {
+wsMain.on('close', function close() {
     console.log('disconnected');
+    process.exit();
 });
-wsMaster.on('message', function incoming(data) {
+wsMain.on('message', function incoming(data) {
     // console.log(data);
     write(data);
+});
+wsMain.on('error', function incoming(data) {
+    console.log(data);
+    process.exit();
 });
 
 
@@ -56,8 +61,25 @@ function connectws() {
 
     ws.on('close', function close() {
         console.log('disconnected');
+        //process.exit();
         connectws();
     });
+
+    ws.on('error', function incoming(data) {
+        console.log(data.code);
+        setTimeout(connectws, 1000*10);
+        //process.exit();
+        //process.kill(process.pid, 'SIGKILL');
+    });
+
+    // catch unhandled errors
+    ws.on('uncaughtException', function (err) {
+        console.log(err);
+        process.exit();
+    });
+
+    // catch ECONNREFUSED, TCPConnectWrap.afterConnect [as oncomplete]
+    
 }
 
 connectws();
@@ -75,10 +97,12 @@ function write(data) {
 process.on('exit', function() {
     console.log('exit');
     stream.stop();
+    process.exit();
 });
 
 process.on('SIGINT', function() {
     console.log('SIGINT');
+    stream.stop();
     process.exit();
 });
 
@@ -86,11 +110,20 @@ process.on('SIGINT', function() {
 
 // check if stream is still running
 
-setInterval(function() {
-    if(stream.inputStreamStarted){
-        //console.log("stream is running");
+setTimeout(function() {
+    //console.log(Object.keys(stream.mpeg1Muxer.stream));
+    isAlive();
+}, 1000*5);
+
+
+function isAlive(){
+    console.log(stream.mpeg1Muxer.stream.exitCode);
+    console.log(wsMain.readyState);
+    if(stream.mpeg1Muxer.stream.exitCode == null){
+        console.log("stream is running");
+        setTimeout(isAlive, 1000*5);
     } else {
         console.log("stream is not running");
         process.exit();
     }
-}, 1000*5);
+}
